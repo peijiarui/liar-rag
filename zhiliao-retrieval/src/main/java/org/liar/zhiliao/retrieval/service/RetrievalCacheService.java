@@ -41,11 +41,9 @@ public class RetrievalCacheService {
      *
      * @param normalizedQuery normalize() 后的规范化查询
      * @param rewriteResult   LLM 改写后的查询文本
-     * @return 写入的改写结果
      */
     @CachePut(value = "query_rewrite")
-    public String putRewrite(String normalizedQuery, String rewriteResult) {
-        return rewriteResult;
+    public void putRewrite(String normalizedQuery, String rewriteResult) {
     }
 
     /**

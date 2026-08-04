@@ -43,8 +43,8 @@ public class ChatController {
     )
     public Flux<String> chat(String memoryId, String message) {
         // 输入长度限制
-        if (message != null && message.length() > 2000) {
-            message = message.substring(0, 2000);
+        if (message != null && message.length() > 200) {
+            message = message.substring(0, 200);
         }
 
         // Prompt 注入检测
